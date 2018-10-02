@@ -8,12 +8,12 @@ spring:
         binder:
           auto-add-partitions: true
       bindings:
-        demo-request:
+        input:
           destination: demoRequest
           group: demo-gateway
           consumer:
             partitioned: true
-        demo-response:
+        output:
           destination: demoResponse
           group: demo-gateway
           consumer:
