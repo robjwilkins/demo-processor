@@ -16,7 +16,7 @@ spring:
         output:
           destination: demoResponse
           group: demo-gateway
-          consumer:
-            partitioned: true
+          producer:
+            partition-key-expression: headers['response-partition-key']
       instance-count: 3
       instance-index: 0
